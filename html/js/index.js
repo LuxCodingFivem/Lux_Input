@@ -22,7 +22,7 @@ window.addEventListener('message', function(event) {
             else if(item.lang == "de") {
                 document.getElementById("cancel").innerHTML = "Abbrechen";
             }
-            document.getElementById("top").innerHTML = '<p style="color: #fff; font-size: 25px; font-family: '+"SignPrinterHouseScript"+', sans-serif;">'+ item.text +'</p>';
+            document.getElementById("top").innerHTML = '<p style="color: #fff; font-size: 25px; font-family: '+"SignPrinterHouseScript"+', sans-serif; margin: 0; max-width: 100%;">'+ item.text +'</p>';
             $('body').show();
         } else {
             $('body').hide();
@@ -51,7 +51,6 @@ function send() {
     var input = document.getElementById("inputfield").value;
     $.post('https://Lux_Input/send', JSON.stringify({input: input}), function(response) {});
     input = "";
-    close_ui();
 }
 
 function close_ui() {
