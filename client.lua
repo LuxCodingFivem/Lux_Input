@@ -1,5 +1,6 @@
 local display = false
 local msg = nil
+local canceled = false
 
 function input(type, bool, text)
     display = bool
@@ -14,21 +15,29 @@ end
 
 RegisterNUICallback('send', function(data)
 	msg = data.input
+    input('input', false)
 end)
 
 RegisterNUICallback('exit', function(data)
+    canceled = true
     input('input', false)
 end)
 
 
 exports('Input', function(type, text)
 	input(type, true, text)
-	while msg == nil do 
+	while msg == nil and not canceled do
 		Wait(1)
 	end
-	newmsg = msg
-	msg = nil 
-    return newmsg
+
+    if not canceled then
+        newmsg = msg
+        msg = nil 
+        return newmsg
+    else
+        canceled = false
+        return nil
+    end
 end)
 
 
