@@ -45,28 +45,28 @@ end)
 -- CreateThread(function()
 -- 		while true do
 -- 			if IsControlJustReleased(0, 38) then 
---	 			print(exports['Lux_Input']:Input('input', 'Title'))
---	 		end
---	 	Wait(0)
---	 	end
+-- 	 			print(exports['Lux_Inputs']:Input('input', 'Title'))
+-- 	 		end
+-- 	 	Wait(0)
+-- 	 	end
 -- end)
 
 -- Number Input field
 -- CreateThread(function()
 -- 		while true do
 -- 			if IsControlJustReleased(0, 38) then 
---	 			print(exports['Lux_Input']:Input('number', 'Title'))
---	 		end
---	 	Wait(0)
---	 	end
+-- 	 			print(exports['Lux_Inputs']:Input('number', 'Title'))
+-- 	 		end
+-- 	 	Wait(0)
+-- 	 	end
 -- end)
 
 -- Password Input field
 -- CreateThread(function()
 -- 		while true do
 -- 			if IsControlJustReleased(0, 38) then 
---	 			print(exports['Lux_Input']:Input('password', 'Title'))
---	 		end
---	 	Wait(0)
---	 	end
+-- 	 			print(exports['Lux_Inputs']:Input('password', 'Title'))
+-- 	 		end
+-- 	 	Wait(0)
+-- 	 	end
 -- end)
